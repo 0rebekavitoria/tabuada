@@ -3,27 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tabuada Colorida</title>
+  <title>Validação de Entrada no Evento</title>
   <link rel="stylesheet" href="exe.css" />
 </head>
 <body>
-  <main class="container">
-    <div class="badge">✨ Matemática divertida</div>
-    <h1>Tabuada Colorida</h1>
-    <p class="subtitle">Descubra a tabuada de qualquer número em segundos.</p>
+  <div class="container">
+    <div class="header">
+      <h1>🎉 Evento</h1>
+      <p class="subtitle">Verifique sua entrada</p>
+    </div>
 
-    <label for="numero" class="sr-only">Digite um número</label>
-    <input
-      type="number"
-      id="numero"
-      placeholder="Digite um número"
-      min="0"
-    />
+    <div class="form-group">
+      <label for="idade">Qual é sua idade?</label>
+      <input 
+        type="number" 
+        id="idade" 
+        placeholder="Digite sua idade" 
+        min="0"
+        max="150"
+      />
+    </div>
 
-    <button id="btnCalcular">Calcular</button>
+    <button id="btnVerificar">Verificar Entrada</button>
 
-    <div id="resultado" class="resultado" aria-live="polite"></div>
-  </main>
+    <div id="mensagem" class="mensagem"></div>
+  </div>
 
   <script src="js/script.js"></script>
 </body>
